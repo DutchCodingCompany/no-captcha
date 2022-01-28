@@ -1,20 +1,22 @@
 No CAPTCHA reCAPTCHA
 ==========
 
-[![Build Status](https://travis-ci.org/anhskohbo/no-captcha.svg?branch=master&style=flat-square)](https://travis-ci.org/anhskohbo/no-captcha)
-[![Latest Stable Version](https://poser.pugx.org/anhskohbo/no-captcha/v/stable)](https://packagist.org/packages/anhskohbo/no-captcha)
-[![Total Downloads](https://poser.pugx.org/anhskohbo/no-captcha/downloads)](https://packagist.org/packages/anhskohbo/no-captcha)
-[![Latest Unstable Version](https://poser.pugx.org/anhskohbo/no-captcha/v/unstable)](https://packagist.org/packages/anhskohbo/no-captcha)
-[![License](https://poser.pugx.org/anhskohbo/no-captcha/license)](https://packagist.org/packages/anhskohbo/no-captcha)
+[![Build Status](https://travis-ci.org/dutchcodingcompany/no-captcha.svg?branch=master&style=flat-square)](https://travis-ci.org/dutchcodingcompany/no-captcha)
+[![Latest Stable Version](https://poser.pugx.org/dutchcodingcompany/no-captcha/v/stable)](https://packagist.org/packages/dutchcodingcompany/no-captcha)
+[![Total Downloads](https://poser.pugx.org/dutchcodingcompany/no-captcha/downloads)](https://packagist.org/packages/dutchcodingcompany/no-captcha)
+[![Latest Unstable Version](https://poser.pugx.org/dutchcodingcompany/no-captcha/v/unstable)](https://packagist.org/packages/dutchcodingcompany/no-captcha)
+[![License](https://poser.pugx.org/dutchcodingcompany/no-captcha/license)](https://packagist.org/packages/dutchcodingcompany/no-captcha)
 
 ![recaptcha_anchor 2x](https://cloud.githubusercontent.com/assets/1529454/5291635/1c426412-7b88-11e4-8d16-46161a081ece.gif)
 
-> For Laravel 4 use [v1](https://github.com/anhskohbo/no-captcha/tree/v1) branch.
+> This is a fork of [anhskohbo/no-captcha](https://github.com/anhskohbo/no-captcha) which seems no longer supported!
+
+> For Laravel 4 use [v1](https://github.com/DutchCodingCompany/no-captcha/tree/v1) branch.
 
 ## Installation
 
 ```
-composer require anhskohbo/no-captcha
+composer require DutchCodingCompany/no-captcha
 ```
 
 ## Laravel 5 and above
@@ -28,19 +30,19 @@ In `app/config/app.php` add the following :
 1- The ServiceProvider to the providers array :
 
 ```php
-Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
+DutchCodingCompany\NoCaptcha\NoCaptchaServiceProvider::class,
 ```
 
 2- The class alias to the aliases array :
 
 ```php
-'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
+'NoCaptcha' => DutchCodingCompany\NoCaptcha\Facades\NoCaptcha::class,
 ```
 
 3- Publish the config file
 
 ```ssh
-php artisan vendor:publish --provider="Anhskohbo\NoCaptcha\NoCaptchaServiceProvider"
+php artisan vendor:publish --provider="DutchCodingCompany\NoCaptcha\NoCaptchaServiceProvider"
 ```
 
 ### Configuration
@@ -175,7 +177,7 @@ require_once "vendor/autoload.php";
 
 $secret  = 'CAPTCHA-SECRET';
 $sitekey = 'CAPTCHA-SITEKEY';
-$captcha = new \Anhskohbo\NoCaptcha\NoCaptcha($secret, $sitekey);
+$captcha = new \DutchCodingCompany\NoCaptcha\NoCaptcha($secret, $sitekey);
 
 if (! empty($_POST)) {
     var_dump($captcha->verifyResponse($_POST['g-recaptcha-response']));
@@ -194,4 +196,4 @@ if (! empty($_POST)) {
 
 ## Contribute
 
-https://github.com/anhskohbo/no-captcha/pulls
+https://github.com/DutchCodingCompany/no-captcha/pulls

@@ -1,34 +1,42 @@
 {
-    "name": "glennbergmans/no-captcha",
+    "name": "dutchcodingcompany/no-captcha",
     "description": "No CAPTCHA reCAPTCHA For Laravel.",
     "keywords": ["recaptcha", "no-captcha", "captcha", "laravel", "laravel4", "laravel5"],
     "license": "MIT",
     "authors": [
         {
+          "name": "anhskohbo",
+          "email": "anhskohbo@gmail.com"
+        },
+        {
             "name": "Glenn Bergmans",
             "email": "glenn@dutchcodingcompany.com"
+        },
+        {
+            "name": "Marco Boers",
+            "email": "marco@dutchcodingcompany.com"
         }
     ],
     "require": {
         "php": ">=5.5.5",
         "illuminate/support": "^5.0|^6.0|^7.0|^8.0",
-        "guzzlehttp/guzzle": "^6.2"
+      "guzzlehttp/guzzle": "^6.2|^7.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.8"
     },
     "autoload": {
         "psr-4": {
-            "GlennBergmans\\NoCaptcha\\": "src/"
+            "DutchCodingCompany\\NoCaptcha\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "GlennBergmans\\NoCaptcha\\NoCaptchaServiceProvider"
+                "DutchCodingCompany\\NoCaptcha\\NoCaptchaServiceProvider"
             ],
             "aliases": {
-                "NoCaptcha": "GlennBergmans\\NoCaptcha\\Facades\\NoCaptcha"
+                "NoCaptcha": "DutchCodingCompany\\NoCaptcha\\Facades\\NoCaptcha"
             }
         }
     }

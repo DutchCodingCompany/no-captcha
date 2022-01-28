@@ -1,6 +1,6 @@
 <?php
 
-namespace GlennBergmans\NoCaptcha\Facades;
+namespace DutchCodingCompany\NoCaptcha\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
